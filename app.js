@@ -1,3 +1,20 @@
+function adicionarFilme(){
+  var filmeFavorito = document.getElementById("filme").value
+  if (filmeFavorito.endsWith(".jpg")) {
+     listarFilmeNaTela(filmeFavorito)
+    } else {
+  console.error("Endereço de filme inválido!")
+}
+  document.getElementById("filme").value = ""
+}
+
+function listarFilmeNaTela (filme) {
+  var elementoFilmeFavorito = "<img src=" + filme + ">"
+  var elementoListaFilmes = document.getElementById("listaFilmes")
+  elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoFilmeFavorito;
+}
+
+
 var capaFilmes = [
   'https://ingresso-a.akamaihd.net/b2b/production/uploads/movie/poster/199/TGM_INTL_DGTL_KEY_ART_T_CRUISE_640_940.jpg',
   'https://br.web.img2.acsta.net/pictures/22/05/18/09/51/0772429.jpg',
